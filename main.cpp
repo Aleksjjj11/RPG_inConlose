@@ -119,7 +119,7 @@ int main(void) {
 	Change_Color_Player(Color_Game);
 	Information_for_Player(keyboard, Color_Game);
 	for (int time = 7000; time >= 1; time-=50) {
-		cout << "До начала игры " << time << "ms" << endl;
+		cout << "пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ " << time << "ms" << endl;
 		Sleep(1);
 		system("cls");
 	}
@@ -296,7 +296,7 @@ void interface_PlayerM(PlayerM Player_My, ColorM& Color_Game) {
 }
 
 void went(PlayerM& Player_My, int  map_lvl_1[][11], char keyboard) { 
-	cin.get(keyboard);
+	keyboard = _getch();
 	int x = Player_My.x;
 	int y = Player_My.y;
 	switch (keyboard) {
@@ -691,7 +691,7 @@ void Information_for_Player(char keyboard, ColorM& Color_Game) {
 		<< " > - Go to the next level;" << endl
 		<< " < - Go to the previous level." << endl
 		<< "To continue the game, click the '/'." << endl;
-		cin.get(keyboard);
+		keyboard = _getch();
 		if (keyboard == '/') {
 			break;
 		}
@@ -704,7 +704,7 @@ void Change_Color_Player(ColorM& Color_Game) {
 	while (object_key != '/' && color_key != 66) {
 		system("cls");
 		SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-		cout << "Возможные цвета:" << endl
+		cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ:" << endl
 			<< "Black = 0," << endl
 			<< "Blue = 1," << endl
 			<< "Green = 2," << endl
@@ -721,27 +721,27 @@ void Change_Color_Player(ColorM& Color_Game) {
 			<< "LightMagenta = 13," << endl
 			<< "Yellow = 14," << endl
 			<< "White = 15" << endl
-			<< "Выход из выбора цвета игры - 66" << endl
-			<< "Введите один из номеров цвета." << endl;
+			<< "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ - 66" << endl
+			<< "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ." << endl;
 		cin >> color_key;
 		if (color_key != 66) {
 			//system("cls");
-			cout << "Выберите кому присвоить данный цвет: " << endl;
-			cout << "Мобам и Боссам - 1 -->"; SetColor(Color_Game.Mob, Black); cout << "M, B" << endl; 
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ: " << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - 1 -->"; SetColor(Color_Game.Mob, Black); cout << "M, B" << endl; 
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "Лечению и призам - 2 -->"; SetColor(Color_Game.Health, Black); cout << "H, P" << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - 2 -->"; SetColor(Color_Game.Health, Black); cout << "H, P" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "Переходам между уровнями и выходу - 3 ------------->"; SetColor(Color_Game.Exit, Black); cout << "<, >, E" << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ пїЅ пїЅпїЅпїЅпїЅпїЅпїЅ - 3 ------------->"; SetColor(Color_Game.Exit, Black); cout << "<, >, E" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "Стенам - 4 -->"; SetColor(Color_Game.Wall, Black); cout << "S" << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅ - 4 -->"; SetColor(Color_Game.Wall, Black); cout << "S" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "Цвету пол. интерфейса - 5" << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅ. пїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅпїЅ - 5" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "Фону - 6" << endl;
+			cout << "пїЅпїЅпїЅпїЅ - 6" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "Игроку - 7 -->"; SetColor(Color_Game.Player, White); cout << "@" << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅпїЅ - 7 -->"; SetColor(Color_Game.Player, White); cout << "@" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "Выход из выбора цвета игры - '/'" << endl;
+			cout << "пїЅпїЅпїЅпїЅпїЅ пїЅпїЅ пїЅпїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅпїЅ пїЅпїЅпїЅпїЅ - '/'" << endl;
 			cin >> object_key;
 			switch (object_key) {
 			case '1': {
