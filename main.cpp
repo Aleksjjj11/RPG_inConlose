@@ -704,7 +704,7 @@ void Change_Color_Player(ColorM& Color_Game) {
 	while (object_key != '/' && color_key != 66) {
 		system("cls");
 		SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-		cout << "��������� �����:" << endl
+		cout << "The color of the elements on the map:" << endl
 			<< "Black = 0," << endl
 			<< "Blue = 1," << endl
 			<< "Green = 2," << endl
@@ -721,27 +721,27 @@ void Change_Color_Player(ColorM& Color_Game) {
 			<< "LightMagenta = 13," << endl
 			<< "Yellow = 14," << endl
 			<< "White = 15" << endl
-			<< "����� �� ������ ����� ���� - 66" << endl
-			<< "������� ���� �� ������� �����." << endl;
+			<< "To exit the color selection, type - 66" << endl
+			<< "Enter the color." << endl;
 		cin >> color_key;
 		if (color_key != 66) {
 			//system("cls");
-			cout << "�������� ���� ��������� ������ ����: " << endl;
-			cout << "����� � ������ - 1 -->"; SetColor(Color_Game.Mob, Black); cout << "M, B" << endl; 
+			cout << "Select the element for which you want to apply the color: " << endl;
+			cout << "Mobs and bosses - 1 -->"; SetColor(Color_Game.Mob, Black); cout << "M, B" << endl; 
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "������� � ������ - 2 -->"; SetColor(Color_Game.Health, Black); cout << "H, P" << endl;
+			cout << "First-aid kits and prizes - 2 -->"; SetColor(Color_Game.Health, Black); cout << "H, P" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "��������� ����� �������� � ������ - 3 ------------->"; SetColor(Color_Game.Exit, Black); cout << "<, >, E" << endl;
+			cout << "Transitions between levels and exit - 3 ------------->"; SetColor(Color_Game.Exit, Black); cout << "<, >, E" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "������ - 4 -->"; SetColor(Color_Game.Wall, Black); cout << "S" << endl;
+			cout << "Wall - 4 -->"; SetColor(Color_Game.Wall, Black); cout << "S" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "����� ���. ���������� - 5" << endl;
+			cout << "Interface - 5" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "���� - 6" << endl;
+			cout << "Interface background - 6" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "������ - 7 -->"; SetColor(Color_Game.Player, White); cout << "@" << endl;
+			cout << "Player - 7 -->"; SetColor(Color_Game.Player, White); cout << "@" << endl;
 				SetColor(Color_Game.Interface, Color_Game.BackGorund_Interface);
-			cout << "����� �� ������ ����� ���� - '/'" << endl;
+			cout << "Exit from the selection of the object - '/'" << endl;
 			cin >> object_key;
 			switch (object_key) {
 			case '1': {
